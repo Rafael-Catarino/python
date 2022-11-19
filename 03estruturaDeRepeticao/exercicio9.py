@@ -5,3 +5,8 @@ y = 1
 while y < 50:
     print(y)
     y += 2
+
+print('------SEGUNDA FORMA...------')
+
+for x in range(1, 50, 2):
+    print(x)
