@@ -2,6 +2,7 @@
 import os
 os.system('clear')
 
+
 def get_price():
     prices = []
     for i in range(1, 4):
@@ -9,15 +10,17 @@ def get_price():
         prices.append(price)
     get_cheapest_price(prices)
 
+
 def get_cheapest_price(prices):
     price1 = prices[0]
     price2 = prices[1]
     price3 = prices[2]
     if (price1 <= price2) and (price1 <= price3):
         print(f'O preço mais barato é: {price1}')
-    elif(price2 <= price1) and (price2 <= price3):
+    elif (price2 <= price1) and (price2 <= price3):
         print(f'O preço mais barato é: {price2}')
-    elif(price3 <= price1) and (price3 <= price2):
-        print(f'O preço mais barato é: {price3}')  
+    elif (price3 <= price1) and (price3 <= price2):
+        print(f'O preço mais barato é: {price3}')
+
 
 get_price()

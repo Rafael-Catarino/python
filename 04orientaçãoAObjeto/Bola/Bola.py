@@ -36,7 +36,7 @@ class Bola:
             self.cor = nova_cor
         else:
             print(f'Tudo bem a cor continua sendo {self.cor}')
-    
+
     def mostra_cor(self):
         print(f'A cor da bola é: {self.cor}')
 
@@ -53,8 +53,10 @@ def criando_bola():
         continuar = input("Continuar? [s/n]").lower()
         if continuar == "n":
             break
-    
+
     bola1.mostra_cor()
-    print(f"A cor da bola é: {bola1.cor}, A circunferência da bola é: {bola1.circunf}, O matérial da bola é: {bola1.material}")
+    print(
+        f"A cor da bola é: {bola1.cor}, A circunferência da bola é: {bola1.circunf}, O matérial da bola é: {bola1.material}")
+
 
 criando_bola()

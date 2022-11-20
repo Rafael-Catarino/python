@@ -55,7 +55,6 @@ def get_estado_civil():
     return estado_civil
 
 
-
 def print_data():
     print(f'Nome: {get_name()}, \nIdade: {get_idade()}, \nSalario: {get_salario()}, \nSexo: {get_sexo()}, \nEstado Civil: {get_estado_civil()}')
 

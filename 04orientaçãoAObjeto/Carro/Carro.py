@@ -22,10 +22,11 @@ class Carro:
         else:
             return False
 
-carro1 = Carro('9ASWX000001',2,1.8,0)
 
-print('Chassi: ',carro1.chassi)
-print('Cor: ', ('Azul' if carro1.cor==1 else 'Branco'))
+carro1 = Carro('9ASWX000001', 2, 1.8, 0)
+
+print('Chassi: ', carro1.chassi)
+print('Cor: ', ('Azul' if carro1.cor == 1 else 'Branco'))
 print('Motor: ', carro1.motor)
 print('Gasolina: ', carro1.litros)
 

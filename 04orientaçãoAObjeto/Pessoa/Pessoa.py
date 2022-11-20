@@ -9,7 +9,7 @@ class Pessoa:
     idade = 0
     peso = 0.0
     altura = 0.0
-    
+
     def __init__(self, nome, idade, peso, altura):
         self.nome = nome
         self.idade = idade
@@ -22,7 +22,8 @@ class Pessoa:
             self.altura += 0.05
 
     def emgordar_ou_emagrecer(self):
-        flag = input(f"Você está pesando {self.peso}Kg deseja mudar o peso? [s/n]: ").lower()
+        flag = input(
+            f"Você está pesando {self.peso}Kg deseja mudar o peso? [s/n]: ").lower()
 
         if flag == "s":
             novo_peso = input("Digite seu novo peso: ")
@@ -42,4 +43,3 @@ pessoa1 = Pessoa(n, i, p, a)
 print(f"nome: {pessoa1.nome}, idade: {pessoa1.idade}, peso: {pessoa1.peso} e altura: {pessoa1.altura}.")
 
 pessoa1.emgordar_ou_emagrecer()
-

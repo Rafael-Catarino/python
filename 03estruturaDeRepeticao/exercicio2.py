@@ -2,11 +2,13 @@
 import os
 os.system('clear')
 
+
 def login():
     nome = input('Digite seu nome: ')
     senha = input('Digite sua senha: ')
-    while(senha == nome):
-            print('Você digitou uma senha igual ao seu nome.')
-            senha = input('Favor digitar outra senha: ')
+    while (senha == nome):
+        print('Você digitou uma senha igual ao seu nome.')
+        senha = input('Favor digitar outra senha: ')
+
 
 login()
