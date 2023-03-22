@@ -10,7 +10,7 @@ os.system('clear')
 
 def get_name():
     nome = input('Digite seu nome: Min 3 caracteres: ').upper()
-    while len(nome) < 4:
+    while len(nome) < 3:
         print('Não pode ser um nome com menos de 3 caracteres. Favor digitar outro nome.')
         nome = input('Digite seu nome: Min 3 caracteres: ').upper()
     os.system('clear')
