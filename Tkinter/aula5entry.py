@@ -17,8 +17,14 @@ label_idade.grid(row=1, column=0)
 entry_idade = Entry(janela, width=15)
 entry_idade.grid(row=1, column=1)
 
+label_pais = Label(janela, width=10, height=2, text="pais : ", bg="black", fg="#FFFFFF")
+label_pais.grid(row=2, column=0)
+
+entry_pais = Entry(janela, width=15)
+entry_pais.grid(row=2, column=1)
+
 button_enviar = Button(janela, width=10, height=0, text="Enviar")
-button_enviar.place(x="65", y="90")
+button_enviar.place(x="65", y="120")
 
 
 janela.mainloop()
