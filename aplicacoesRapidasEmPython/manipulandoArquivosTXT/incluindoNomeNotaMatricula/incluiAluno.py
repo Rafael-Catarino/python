@@ -71,5 +71,3 @@ def startPrograma():
 
 
 startPrograma()
-
-
