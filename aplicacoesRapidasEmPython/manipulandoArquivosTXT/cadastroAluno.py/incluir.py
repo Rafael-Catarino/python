@@ -21,9 +21,9 @@ def calculaMedia(nota1, nota2, nota3, nota4):
     return media
 
 
-def contaLinhas():
+""" def contaLinhas():
     with open("arquivo.txt", "r") as arquivo:
-        return len(arquivo.readlines())+1
+        return len(arquivo.readlines())+1 """
 
 
 def salvaNoarquivo(arr):
@@ -36,7 +36,7 @@ def salvaAluno():
     while flag == "S":
         os.system("clear")
         cabecalho()
-        linha = str(contaLinhas())
+        """ linha = str(contaLinhas()) """
         nome = input("Nome: ").upper()
         mat = input("Matricula: ")
         nota1 = input("1º Nota: ")
@@ -45,8 +45,7 @@ def salvaAluno():
         nota4 = input("4º Nota: ")
         media = str(calculaMedia(nota1, nota2, nota3, nota4))
         resp = aprovOureprov(media)
-        salvaNoarquivo([linha, nome, mat, nota1, nota2,
-                        nota3, nota4, media, resp])
-        print("O aluno foram salvo com sucesso.")
-        flag = input("Incluir aluno [s | n]: ").upper()
-        
+        arr = [nome, mat, nota1, nota2, nota3, nota4, media, resp]
+        salvaNoarquivo(arr)
+        print("O aluno foi salvo com sucesso.")
+        flag = input("Incluir novo aluno [s | n]? ").upper()        

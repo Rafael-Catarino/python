@@ -5,6 +5,7 @@ def cabecalho():
 
 
 def mostraDado():
+    cabecalho()
     with open("arquivo.txt", "r") as arquivo:
         print(arquivo.read())
         deletaAluno()
