@@ -28,7 +28,7 @@ def start():
             mostraDado()
         elif flag == 4:
             consultaAluno()
-        resp = input("\nDeseja continuar [s|n]: ").upper()
+        resp = input("\nDeseja continuar no programa? [s|n]: ").upper()
 
 
 start()
