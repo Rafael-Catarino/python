@@ -1,4 +1,5 @@
 from modelos.avaliacao import Avaliacao
+from modelos.cardapio.item_cardapio import ItemCardapio
 
 
 class Restaurante:
@@ -9,6 +10,7 @@ class Restaurante:
         self._categoria = categoria.upper()
         self._ativo = False  # O _ faz com que esse atributo fique privado.
         self._avaliacao = []
+        self._cardapio = []
         Restaurante.restaurantes.append(self)
 
     def __str__(self):
@@ -46,13 +48,20 @@ class Restaurante:
         media = round(soma_das_notas / quantidade_de_notas, 1)
         return media
 
-# restaurante_praca = Restaurante("Praça", "Gourmet")
-# restaurante_praca.alternar_estado()
-# restaurante_pizza = Restaurante("Pizza Express", "Italiana")
+    def adicionar_no_cardapio(self, item):
+        if isinstance(item, ItemCardapio):
+            self._cardapio.append(item)
 
-# Restaurante.listar_restaurantes()
-
-# print(restaurante_praca)
-# print(restaurante_pizza)
-# print(vars(restaurante_praca))
-# print(dir(restaurante_praca))
+    @property
+    def exibir_cardapio(self):
+        print(f"Cardapio do restaurante {self._nome}\n")
+        for i, item in enumerate(self._cardapio, start=1):
+            if hasattr(item, "descricao"):
+                mensagem_prato = f"{i}. Nome: {item._nome} | Preço: R$ {item._preco} | Descrição: {item.descricao}"
+                print(mensagem_prato)
+            elif hasattr(item, "tamanho"):
+                mensagem_bebida = f"{i}. Nome: {item._nome} | Preço: R$ {item._preco} | Tamanho: {item.tamanho}"
+                print(mensagem_bebida)
+            elif hasattr(item, "tipo"):
+                mensagem_sobremesa = f"{i}. Nome: {item._nome} | Preço: R$ {item._preco} | Tipo: {item.tipo}"
+                print(mensagem_sobremesa)
